@@ -25,7 +25,7 @@ class Auth extends CI_Controller {
                     'nama' => $username,
                     'status' => "login"
                     );
-        
+         
                 $this->session->set_userdata($data_session);
                 $data['gagal'] = 0;
                 redirect('Dashboard');
@@ -36,12 +36,12 @@ class Auth extends CI_Controller {
         $this->load->view('login',$data);
     }
     public function logout(){
-		$this->session->sess_destroy(); // Hapus semua session
-    	redirect('Auth'); // Redirect ke halaman login
+		$this->session->sess_destroy();
+    	redirect('Auth');
   	}
-    function Tes(){
-        $this->load->view('header');
-        $this->load->view('tes');
-        $this->load->view('footer');
-    }
+    // function Tes(){
+    //     $this->load->view('header');
+    //     $this->load->view('tes');
+    //     $this->load->view('footer');
+    // }
 }
